@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -15,6 +19,10 @@ ul {
 }
 
 .card {
+  display: flex;
+  justify-content: space-between;
+  font-size: 23px;
+  font-weight: bold;
   padding: 16px;
   margin-bottom: 20px;
   border: 1px solid lightgray;
@@ -23,6 +31,27 @@ ul {
   color: #444;
 }
 
+.card__options {
+  color: #444;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  background-color: #fff;
+  border:1px solid lightgray;
+  padding: 5px 10px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.card__options:hover {
+  background-color: teal;
+  color: #fff;
+  border-color: #fff;
+}
+
+.card__options::first-letter {
+  text-transform: uppercase;
+}
 /* utils */
 .mb1 {
   margin-bottom: 10px;

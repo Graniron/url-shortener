@@ -4,7 +4,30 @@ header {
   padding: 10px;
 }
 
-h1 {
-  margin-top: 0;
-  margin-bottom: 0;
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  display: block;
+  padding: 5px;
+}
+
+nav a {
+  display: block;
+  font-size: 20px;
+  color:#fff;
+  text-decoration: none;
+}
+.navigation:hover {
+  text-decoration: underline;
+}
+.navigation::first-letter {
+  text-transform: uppercase;
 }

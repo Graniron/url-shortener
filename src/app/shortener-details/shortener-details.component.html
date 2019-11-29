@@ -1,0 +1,17 @@
+<div class="details">
+    <div class="details_header">
+        <h1>{{this.shortening.name}}</h1>
+        <div>
+            <div class="card__options" (click) = "deleteShortening(shortening)">delete</div>
+        </div>
+    </div>
+
+    <ul>
+        <li><span>Original link: </span><a [href]="this.shortening.original_link">{{this.shortening.original_link}}</a></li>
+        <li><span>Share link: </span><a [href]="this.shortening.full_share_link">{{this.shortening.share_link}}</a></li>
+        <li><span>Short link: </span><a [href]="this.shortening.full_short_link">{{this.shortening.short_link}}</a></li>
+        <li><span>Short link #2: </span><a [href]="this.shortening.full_short_link2">{{this.shortening.short_link2}}</a></li>
+    </ul>
+    
+   
+</div>

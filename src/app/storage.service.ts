@@ -11,9 +11,25 @@ export class StorageService {
     this.shortenings = this.getShortenings();
   }
 
-  saveShortening(shortening: Shortening): void {
+  saveShortening(shortening: Shortening, name: string): void {
+    shortening.name = name;
     this.shortenings.push(shortening);
     this.updateStorage(this.shortenings);
+  }
+
+  getShorteningById(id: string):any {
+    return this.shortenings.filter(shortening => shortening.code === id)[0];
+  }
+
+  deleteShortening(shortening: Shortening) : boolean {
+    const conf = confirm(`Do you really want to delete shortening ${shortening.name}`);
+    if(!conf) return false;
+
+    const shorteningPosition = this.shortenings.indexOf(shortening);
+    if(shorteningPosition != -1) this.shortenings.splice(shorteningPosition,1);
+
+    this.updateStorage(this.shortenings);
+    return true;
   }
 
   getShortenings(): Shortening[] {

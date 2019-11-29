@@ -1,14 +1,24 @@
 <h1>Shortener</h1>
 
-<div>
-  <input type="text" placeholder="URL" [(ngModel)]='url'>
-  <button (click)='onSubmit()'>Shorten</button>
+<div class="shortening_menu">
+  <div>
+      <input type="text" placeholder="Name" [(ngModel)] = 'name'>
+      <input type="text" placeholder="URL" [(ngModel)]='url'>
+      <button (click) ='onSubmit()'>Shorten</button>
+  </div>
+  <input type="text" placeholder="Search..." (input) = 'onInput($event)'>
+
 </div>
 
+<div *ngIf = "!shortenings.length" class="empty_notification">
+  I can`t find any shortening :(
+</div>
 <ul>
   <li *ngFor="let short of shortenings" class="card">
-    {{ short.original_link }}
-    -->
-    <a [href]="short.full_short_link" target="_blank">{{short.full_short_link}}</a>
+    {{short.name}}
+    <div class="card__buttons__wrapper">
+        <div class="card__options" (click) = "goToDetails(short)">view details</div>
+        <div class="card__options" (click) = "deleteShortening(short)">delete</div>
+    </div>
   </li>
 </ul>

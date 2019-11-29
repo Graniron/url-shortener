@@ -1,0 +1,21 @@
+input { 
+    margin-right: 10px;
+}
+
+input:last-child {
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+.shortening_menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.empty_notification {
+    font-size: 45px;
+    text-align: center;
+    padding:   45px;
+    color: lightslategray;
+
+}

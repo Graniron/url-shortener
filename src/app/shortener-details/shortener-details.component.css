@@ -1,0 +1,17 @@
+.details {
+    width: 50%;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    box-shadow: 3px 5px 5px 3px #444;
+}
+
+.details_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details li {
+    padding: 5px;
+}
